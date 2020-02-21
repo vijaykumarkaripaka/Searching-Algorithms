@@ -1,0 +1,31 @@
+//using c++ binary search algorithm implementation
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    cout << "no .of elements : " << n << endl;
+    int halfsize = (n/2);
+    int searchValue = 5;
+    if (arr[halfsize] <= searchValue)
+    {
+        for (int i=halfsize;i<n;i++)
+        {
+            if (arr[i] == searchValue)
+                 cout << "searching in second half of the array :) found the value, searching value using binary search algorithm \
+cooooool,enjoy the day "<<arr[i] << " position is "<< i <<endl;
+        }
+    }
+    else
+    {
+        for (int i=0;i<halfsize;i++)
+        {
+            if (arr[i] == searchValue)
+                cout << "searching in first half of the array :) found the value, searching value using binary search algorithm \
+cooooool,enjoy the day "<<arr[i] << " position is "<< i <<endl;
+        }
+    }
+
+    return 0;
+}
